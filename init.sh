@@ -4,7 +4,7 @@ sudo /etc/init.d/nginx stop
 sudo /etc/init.d/mysql stop
 sudo /etc/init.d/gunicorn stop
 
-sudo /etc/init.d/gunicorn restart
+sudo /etc/init.d/gunicorn -w 4 /home/box/web/hello:app
 sudo /etc/init.d/mysql start
 sudo /etc/init.d/nginx start
 
