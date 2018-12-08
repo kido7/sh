@@ -1,5 +1,14 @@
-import multiprocessing
+CONFIG = {
+  'mode': 'wsgi',
+  'working_dir': '/home/box/web',
+  'python': '/usr/bin/python3',
+  'args': (
+    '--bind=0.0.0.0:8080',
+    '--workers=4',
+    '--timeout=60',
+    'hello:app'
+  )
+}
 
-bind = "0.0.0.0:8000"
-workers = multiprocessing.cpu_count() * 2 + 1
+
 
